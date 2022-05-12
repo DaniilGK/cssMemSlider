@@ -13,25 +13,32 @@
 
 .wrapper {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 8% auto;
     padding: 0 80px;
 }
 
 .slider-container {
+    margin: auto;
+    width: 70%;
     height: 70vh;
+    padding: 20px;
+    background: rgb(0, 7, 71);
+    border-radius: 3px;
 }
 
 .slider {
     overflow: hidden;
-    display: flex;
     align-items: center;
+    width: 100%;
     height: 90%;
-    background: #000;
+    border-radius: 3px;
+    outline: 2px solid #28ff00;
 }
 
 .slider-item {
     position: relative;
-    display: flex;
+    /* display: flex; */
+    gap: 20%;
     width: 100%;
     height: 100%;
 }
@@ -41,10 +48,90 @@
     height: 100%;
 }
 
+.memfir {
+    background: url(./img/mem1.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.memsec {
+    margin: 8% auto;
+    background: url(./img/mem2.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.memthr {
+    margin: 8% auto;
+    background: url(./img/mem3.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.memfour {
+    margin: 8% auto;
+    background: url(./img/mem4.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.memfiv {
+    margin: 8% auto;
+    background: url(./img/mem5.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.memsix {
+    background: url(./img/mem6.jpg) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+/* .memImg {
+    height: 100%;
+} */
+
 .text-and-dots {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 10%;
+}
+
+.text-container {
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+    width: 21%;
+}
+
+.text {
+    font-size: 18pt;
+}
+
+.dots-container {
+    display: flex;
+    gap: 8px;
+
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 29px;
+}
+
+.btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 5px;
     background: red;
 }
 
-
+.dots:hover .btn{
+    outline: 2px solid #FFFFFF;
+}
