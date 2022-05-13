@@ -18,6 +18,9 @@
 }
 
 .slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin: auto;
     width: 70%;
     height: 70vh;
@@ -37,8 +40,6 @@
 
 .slider-item {
     position: relative;
-    /* display: flex; */
-    gap: 20%;
     width: 100%;
     height: 100%;
 }
@@ -48,48 +49,45 @@
     height: 100%;
 }
 
-.memfir {
+#memfir {
     background: url(./img/mem1.jpg) no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 80% 80%;
 }
 
-.memsec {
+#memsec {
     margin: 8% auto;
     background: url(./img/mem2.jpg) no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 80% 80%;
 }
 
-.memthr {
+#memthr {
     margin: 8% auto;
     background: url(./img/mem3.jpg) no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 80% 80%;
 }
 
-.memfour {
+#memfour {
     margin: 8% auto;
     background: url(./img/mem4.jpg) no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 80% 80%;
 }
 
-.memfiv {
+#memfiv {
     margin: 8% auto;
     background: url(./img/mem5.jpg) no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 80% 80%;
 }
 
-.memsix {
+#memsix {
     background: url(./img/mem6.jpg) no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 80% 80%;
 }
-/* .memImg {
-    height: 100%;
-} */
 
 .text-and-dots {
     display: flex;
@@ -103,7 +101,7 @@
     overflow: hidden;
     display: flex;
     gap: 10px;
-    width: 21%;
+    width: 200px;
 }
 
 .text {
@@ -113,25 +111,42 @@
 .dots-container {
     display: flex;
     gap: 8px;
+}
 
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.label:hover .dots {
+    outline: 3px solid;
+}
+
+.input {
+    display: none;
 }
 
 .dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 29px;
-}
-
-.btn {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    margin: 5px;
     background: red;
 }
 
-.dots:hover .btn{
-    outline: 2px solid #FFFFFF;
+.dots::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #28ff00;
+    transform: scale(0);
+}
+
+.input:checked + .dots::after {
+    transform: scale(1);
 }
