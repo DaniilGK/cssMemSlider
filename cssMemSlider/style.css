@@ -61,13 +61,15 @@ input {
     align-items: center;
     gap: 0.2em;
     height: 3em;
+    overflow: hidden;
+    background: rgb(0, 7, 71);
 }
 
 .text-container {
     position: relative;
     overflow: hidden;
     left: 1em;
-    width: 130px;
+    width: 8em;
     display: flex;
     gap: 2em;
 }
@@ -91,8 +93,8 @@ input {
 }
 
 .dots {
-    width: 20px;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     background: red;
 }
@@ -181,3 +183,42 @@ input {
 #text6:checked ~ .t6 {
     margin-left: -806px;
 }
+
+@media (max-width: 1024px) {
+    .slider-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .slider {
+        justify-content: space-between;
+    }
+
+    .text-container {
+        position: absolute;
+        width: 6em;
+        bottom: 42px;
+    }
+    
+    .text {
+        font-size: 15pt;
+    }
+}
+
+@media (max-width: 390px) {
+    .dots-container {
+        gap: 0;
+    }
+    .label {
+        width: 1em;
+        height: 1em;
+    }
+
+    .dots {
+        width: 1em;
+        height: 1em;
+    }
+}
+
+
