@@ -51,6 +51,30 @@
     height: 100%;
 }
 
+.m1 {
+    transform: translate(0%);
+}
+
+.m2 {
+    transform: translate(100%);   
+}
+
+.m3 {
+    transform: translate(100%); 
+}
+
+.m4 {
+    transform: translate(100%); 
+}
+
+.m5 {
+    transform: translate(100%);
+}
+
+.m6 {
+    transform: translate(100%);
+}
+
 input {
     display: none;
 }
@@ -75,8 +99,35 @@ input {
 }
 
 .text {
+    position: absolute;
+    bottom: 0.2em;
+    left: 20em;
     font-size: 24pt;
     background: rgb(0, 7, 71);
+}
+
+.t1 {
+    left: 13em;
+}
+
+.t2 {
+    left: 17.8em;
+}
+
+.t3 {
+    left: 722px;
+}
+
+.t4 {
+    left: 882px;
+}
+
+.t5 {
+    left: 175%;
+}
+
+.t6 {
+    left: 201%;
 }
 
 .lab-mem {
@@ -99,89 +150,28 @@ input {
     background: red;
 }
 
-.lab-text {
-    position: absolute;
-    bottom: 40px;
-    width: 1em;
-    height: 1em;
-}
-
-.lt1 {
-    background: wheat;
-    left: 122px;
-}
-
-.lt2 {
-    background: rgb(138, 111, 62);
-    left: 158px;
-}
-
-.lt3 {
-    background: rgb(61, 58, 51);
-    left: 192px;
-}
-
-.lt4 {
-    background: rgb(87, 59, 7);
-    left: 228px;
-}
-
-.lt5 {
-    background: rgb(95, 95, 95);
-    left: 263px;
-}
-
-.lt6 {
-    background: rgb(255, 255, 255);
-    left: 298px;
-}
-
 #mem1:checked ~ .m1{
-    margin-left: 0;
+    transform: translate(0%) !important;
 }
 
 #mem2:checked ~ .m2 {
-    margin-left: -120%;
+    transform: translate(-120%) !important;
 }
 
 #mem3:checked ~ .m3 {
-    margin-left: -240%;
+    transform: translate(-240%) !important;
 }
 
 #mem4:checked ~ .m4 {
-    margin-left: -360%;
+    transform: translate(-360%) !important;
 }
 
 #mem5:checked ~ .m5 {
-    margin-left: -480%;
+    transform: translate(-480%) !important;
 }
 
 #mem6:checked ~ .m6 {
-    margin-left: -600%;
-}
-
-#text1:checked ~ .t1 {
-    margin-left: 0px;
-}
-
-#text2:checked ~ .t2 {
-    margin-left: -162px;
-}
-
-#text3:checked ~ .t3 {
-    margin-left: -323px;
-}
-
-#text4:checked ~ .t4 {
-    margin-left: -484px;
-}
-
-#text5:checked ~ .t5 {
-    margin-left: -645px;
-}
-
-#text6:checked ~ .t6 {
-    margin-left: -806px;
+    transform: translate(-600%) !important;
 }
 
 @media (max-width: 1024px) {
@@ -193,12 +183,6 @@ input {
 @media (max-width: 580px) {
     .slider {
         justify-content: space-between;
-    }
-
-    .text-container {
-        position: absolute;
-        width: 6em;
-        bottom: 42px;
     }
     
     .text {
