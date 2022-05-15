@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -14,138 +15,169 @@
 .wrapper {
     max-width: 1440px;
     margin: 8% auto;
-    padding: 0 80px;
+    padding: 0 3em;
 }
 
 .slider-container {
     display: flex;
-    flex-direction: column;
-    gap: 1.2em;
+    justify-content: center;
     margin: auto;
-    width: 70%;
-    height: 70vh;
-    padding: 1.5em;
-    background: rgb(0, 7, 71);
+    padding: 2em;
+    width: 50%;
     border-radius: 1%;
+    background: rgb(0, 7, 71);
 }
 
 .slider {
-    overflow: hidden;
-    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
-    height: 90%;
     border-radius: 1%;
     outline: .2em solid #28ff00;
-}
-
-.slider-item {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
 }
 
 .mem {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+}
+
+.mem img {
+    display: flex;
     width: 100%;
     height: 100%;
-}
-
-.mem1 {
-    background: url(./img/mem1.jpg) no-repeat;
-    background-position: center;
-    background-size: 80% 80%;
-}
-
-.mem2 {
-    margin: 8% auto;
-    background: url(./img/mem2.jpg) no-repeat;
-    background-position: center;
-    background-size: 80% 80%;
-}
-
-.mem3 {
-    margin: 8% auto;
-    background: url(./img/mem3.jpg) no-repeat;
-    background-position: center;
-    background-size: 80% 80%;
-}
-
-.mem4 {
-    margin: 8% auto;
-    background: url(./img/mem4.jpg) no-repeat;
-    background-position: center;
-    background-size: 80% 80%;
-}
-
-.mem5 {
-    margin: 8% auto;
-    background: url(./img/mem5.jpg) no-repeat;
-    background-position: center;
-    background-size: 80% 80%;
-}
-
-.mem6 {
-    background: url(./img/mem6.jpg) no-repeat;
-    background-position: center;
-    background-size: 80% 80%;
-}
-
-.text-and-dots {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 10%;
-}
-
-.text-container {
-    overflow: hidden;
-    display: flex;
-    gap: 2em;
-    width: 13em;
-}
-
-.text {
-    font-size: 17pt;
-}
-
-.dots-container {
-    display: flex;
-}
-
-.label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    width: 2.6em;
-    height: 2.6em;
-}
-
-.label:hover .dots {
-    outline: .2em solid;
 }
 
 input {
     display: none;
 }
 
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+    height: 3em;
+}
+
+.text-container {
+    position: relative;
+    overflow: hidden;
+    left: 1em;
+    width: 130px;
+    display: flex;
+    gap: 2em;
+}
+
+.text {
+    font-size: 24pt;
+}
+
+.lab-mem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.lab-mem:hover > .dots{
+    outline: 2px solid;
+}
+
 .dots {
-    width: 1.3em;
-    height: 1.3em;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: red;
 }
 
-.dots::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #28ff00;
-    transform: scale(0);
+.lab-text {
+    position: absolute;
+    bottom: 40px;
+    width: 1em;
+    height: 1em;
+    background: #28ff00;
 }
 
-input:checked + .dots::after {
-    transform: scale(1);
+.lt1 {
+    background: wheat;
+    left: 122px;
+}
+
+.lt2 {
+    background: rgb(138, 111, 62);
+    left: 158px;
+}
+
+.lt3 {
+    background: rgb(61, 58, 51);
+    left: 192px;
+}
+
+.lt4 {
+    background: rgb(87, 59, 7);
+    left: 228px;
+}
+
+.lt5 {
+    background: rgb(95, 95, 95);
+    left: 263px;
+}
+
+.lt6 {
+    background: rgb(255, 255, 255);
+    left: 298px;
+}
+
+#mem1:checked ~ .m1{
+    margin-left: 0;
+}
+
+#mem2:checked ~ .m2 {
+    margin-left: -120%;
+}
+
+#mem3:checked ~ .m3 {
+    margin-left: -240%;
+}
+
+#mem4:checked ~ .m4 {
+    margin-left: -360%;
+}
+
+#mem5:checked ~ .m5 {
+    margin-left: -480%;
+}
+
+#mem6:checked ~ .m6 {
+    margin-left: -600%;
+}
+
+#text1:checked ~ .t1 {
+    margin-left: 0px;
+}
+
+#text2:checked ~ .t2 {
+    margin-left: -161px;
+}
+
+#text3:checked ~ .t3 {
+    margin-left: -322px;
+}
+
+#text4:checked ~ .t4 {
+    margin-left: -483px;
+}
+
+#text5:checked ~ .t5 {
+    margin-left: -644px;
+}
+
+#text6:checked ~ .t6 {
+    margin-left: -805px;
 }
