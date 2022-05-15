@@ -74,6 +74,7 @@ input {
 
 .text {
     font-size: 24pt;
+    background: rgb(0, 7, 71);
 }
 
 .lab-mem {
@@ -101,7 +102,6 @@ input {
     bottom: 40px;
     width: 1em;
     height: 1em;
-    background: #28ff00;
 }
 
 .lt1 {
@@ -163,21 +163,21 @@ input {
 }
 
 #text2:checked ~ .t2 {
-    margin-left: -161px;
+    margin-left: -162px;
 }
 
 #text3:checked ~ .t3 {
-    margin-left: -322px;
+    margin-left: -323px;
 }
 
 #text4:checked ~ .t4 {
-    margin-left: -483px;
+    margin-left: -484px;
 }
 
 #text5:checked ~ .t5 {
-    margin-left: -644px;
+    margin-left: -645px;
 }
 
 #text6:checked ~ .t6 {
-    margin-left: -805px;
+    margin-left: -806px;
 }
