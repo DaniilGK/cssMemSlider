@@ -124,32 +124,32 @@ input {
 }
 
 #mem1:checked ~ .m1 {
-    transform: translate(0%) !important;
+    transform: translate(0%);
 }
 
 #mem2:checked ~ .m2, 
 #mem2:checked ~ .text-container > h1.text.t2 {
-    transform: translate(-120%) !important;
+    transform: translate(-120%);
 }
 
 #mem3:checked ~ .m3, 
 #mem3:checked ~ .text-container > h1.text.t3 {
-    transform: translate(-240%) !important;
+    transform: translate(-240%);
 }
 
 #mem4:checked ~ .m4, 
 #mem4:checked ~ .text-container > h1.text.t4 {
-    transform: translate(-360%) !important;
+    transform: translate(-360%);
 }
 
 #mem5:checked ~ .m5, 
 #mem5:checked ~ .text-container > h1.text.t5 {
-    transform: translate(-480%) !important;
+    transform: translate(-480%);
 }
 
 #mem6:checked ~ .m6, 
 #mem6:checked ~ .text-container > h1.text.t6  {
-    transform: translate(-600%) !important;
+    transform: translate(-600%);
 }
 
 @media (max-width: 1255px) {
