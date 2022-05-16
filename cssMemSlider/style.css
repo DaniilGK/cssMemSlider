@@ -25,7 +25,7 @@
     padding: 2em;
     width: 50%;
     border-radius: 1%;
-    background: rgb(0, 7, 71);
+    background: rgb(0 12 124);
 }
 
 .slider {
@@ -43,6 +43,10 @@
     display: flex;
     align-items: center;
     gap: 20%;
+}
+
+input {
+    display: none;
 }
 
 .mem img {
@@ -75,8 +79,19 @@
     transform: translate(100%);
 }
 
-input {
-    display: none;
+.text-container {
+    position: absolute;
+    display: flex;
+    gap: 26px;
+    width: 130px;
+    overflow: hidden;
+    top: 91.5%;
+    left: 75%;
+}
+
+.text {
+    font-size: 24pt;
+    background: rgb(0 12 124);
 }
 
 .dots-container {
@@ -85,49 +100,7 @@ input {
     align-items: center;
     gap: 0.2em;
     height: 3em;
-    overflow: hidden;
-    background: rgb(0, 7, 71);
-}
-
-.text-container {
-    position: relative;
-    overflow: hidden;
-    left: 1em;
-    width: 8em;
-    display: flex;
-    gap: 2em;
-}
-
-.text {
-    position: absolute;
-    bottom: 0.2em;
-    left: 20em;
-    font-size: 24pt;
-    background: rgb(0, 7, 71);
-}
-
-.t1 {
-    left: 13em;
-}
-
-.t2 {
-    left: 17.8em;
-}
-
-.t3 {
-    left: 722px;
-}
-
-.t4 {
-    left: 882px;
-}
-
-.t5 {
-    left: 175%;
-}
-
-.t6 {
-    left: 201%;
+    background: rgb(0 12 124);
 }
 
 .lab-mem {
@@ -150,33 +123,81 @@ input {
     background: red;
 }
 
-#mem1:checked ~ .m1{
+#mem1:checked ~ .m1 {
     transform: translate(0%) !important;
 }
 
-#mem2:checked ~ .m2 {
+#mem2:checked ~ .m2, 
+#mem2:checked ~ .text-container > h1.text.t2 {
     transform: translate(-120%) !important;
 }
 
-#mem3:checked ~ .m3 {
+#mem3:checked ~ .m3, 
+#mem3:checked ~ .text-container > h1.text.t3 {
     transform: translate(-240%) !important;
 }
 
-#mem4:checked ~ .m4 {
+#mem4:checked ~ .m4, 
+#mem4:checked ~ .text-container > h1.text.t4 {
     transform: translate(-360%) !important;
 }
 
-#mem5:checked ~ .m5 {
+#mem5:checked ~ .m5, 
+#mem5:checked ~ .text-container > h1.text.t5 {
     transform: translate(-480%) !important;
 }
 
-#mem6:checked ~ .m6 {
+#mem6:checked ~ .m6, 
+#mem6:checked ~ .text-container > h1.text.t6  {
     transform: translate(-600%) !important;
+}
+
+@media (max-width: 1255px) {
+    .text-container {
+        top: 90.5%;
+        left: 73%;
+    }
+}
+
+@media (max-width: 1190px) {
+    .slider {
+        gap: 40px;
+    }
+
+    .text-container {
+        top: 81.5%;
+        left: 36.5%;
+    }
 }
 
 @media (max-width: 1024px) {
     .slider-container {
         width: 100%;
+    }
+    .text-container {
+        top: 93.9%;
+        left: 69.5%;
+    }
+}
+
+@media (max-width: 840px) {
+    .text-container {
+        top: 92.5%;
+        left: 71.5%;
+    }
+}
+
+@media (max-width: 660px) {
+    .text-container {
+        top: 83.5%;
+        left: 37.5%;
+    }
+}
+
+@media (max-width: 625px) {
+    .text-container {
+        top: 81.5%;
+        left: 36.5%;
     }
 }
 
@@ -184,9 +205,27 @@ input {
     .slider {
         justify-content: space-between;
     }
+
+    .text-container {
+        width: 100px;
+        gap: 17px;
+    }
     
     .text {
         font-size: 15pt;
+    }
+}
+
+@media (max-width: 490px) {
+    .text-container {
+        top: 77.5%;
+    }
+}
+
+@media (max-width: 425px) {
+    .text-container {
+        top: 73.5%;
+        left: 33.5%;
     }
 }
 
@@ -202,6 +241,13 @@ input {
     .dots {
         width: 1em;
         height: 1em;
+    }
+}
+
+@media (max-width: 320px) {
+    .text-container {
+        top: 63.5%;
+        left: 23.5%;
     }
 }
 
